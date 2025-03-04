@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>力明华大数智产业学院</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/font-awesome.min.css">
+    <style>
+        .hero {
+            background: linear-gradient(rgba(30, 55, 153, 0.85), rgba(30, 55, 153, 0.85)), url('./images/campus.jpg');
+            background-size: cover;
+            background-position: center;
+            color: white;
+            padding: 120px 0 80px;
+            text-align: center;
+        }
+        
+        .hero h1 {
+            font-size: 2.8rem;
+            margin-bottom: 1.5rem;
+            color: white;
+        }
+        
+        .hero p {
+            font-size: 1.2rem;
+            max-width: 800px;
+            margin: 0 auto;
+            opacity: 0.9;
+        }
+
+        .features {
+            padding: 4rem 0;
+            background: var(--light-gray);
+        }
+
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 2rem;
+            margin-top: 2rem;
+        }
+
+        .feature-card {
+            background: white;
+            padding: 2rem;
+            border-radius: 8px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+            text-align: center;
+            transition: transform 0.3s;
+        }
+
+        .feature-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .feature-icon {
+            width: 100px;
+            height: 100px;
+            margin: 0 auto 1rem;
+            background: var(--primary-color);
+            border-radius: 50%;
+            display: flex !important;
+            align-items: center !important;
+            justify-content: center !important;
+            color: white;
+        }
+
+        .feature-icon i {
+            font-size: 2.5rem;
+        }
+
+        .programs-preview {
+            padding: 4rem 0;
+            background: var(--light-gray);
+        }
+
+        .programs-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 2rem;
+            margin-top: 2rem;
+            max-width: 1200px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .program-card {
+            background: white;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .program-card-content {
+            padding: 1.5rem;
+            flex-grow: 1;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .program-card h3 {
+            color: var(--primary-color);
+            margin-bottom: 1rem;
+            font-size: 1.3rem;
+        }
+
+        .program-card p {
+            margin-bottom: 1.5rem;
+            flex-grow: 1;
+        }
+
+        .program-card .btn-primary {
+            align-self: flex-start;
+            margin-top: auto;
+        }
+
+        .news-section {
+            padding: 4rem 0;
+            background: var(--light-gray);
+        }
+
+        .news-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin-top: 2rem;
+        }
+
+        .news-card {
+            background: white;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+
+        .news-card-content {
+            padding: 1.5rem;
+        }
+
+        .news-date {
+            color: var(--secondary-color);
+            font-size: 0.9rem;
+        }
+
+        .btn-primary {
+            display: inline-block;
+            background: var(--primary-color);
+            color: white;
+            padding: 0.8rem 2rem;
+            border-radius: 4px;
+            text-decoration: none;
+            transition: background-color 0.3s;
+            margin-top: 1rem;
+        }
+
+        .btn-primary:hover {
+            background: var(--secondary-color);
+        }
+
+        .section-title {
+            text-align: center;
+            margin-bottom: 2rem;
+        }
+
+        .section-title h2 {
+            color: var(--primary-color);
+            font-size: 2rem;
+            margin-bottom: 1rem;
+        }
+
+        .section-title p {
+            color: var(--text-color);
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        @media (max-width: 992px) {
+            .programs-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+
+        @media (max-width: 768px) {
+            .programs-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container header-content">
+            <div class="logo">山东力明科技职业学院</div>
+            <nav>
+                <ul>
+                    <li><a href="index.html">首页</a></li>
+                    <li><a href="about.html">学院简介</a></li>
+                    <li><a href="programs.html">专业介绍</a></li>
+                    <li><a href="contact.html">联系我们</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <section class="hero">
+        <div class="container">
+            <h1>力明华大数智产业学院</h1>
+            <p>培养数字时代的创新人才，打造产教融合的人才培养基地</p>
+            <a href="about.html" class="btn-primary">了解更多</a>
+        </div>
+    </section>
+
+    <section class="features">
+        <div class="container">
+            <div class="section-title">
+                <h2>学院特色</h2>
+                <p>校企深度合作，打造一流产教融合人才培养基地</p>
+            </div>
+            <div class="features-grid">
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fa fa-handshake-o"></i>
+                    </div>
+                    <h3>校企合作</h3>
+                    <p>与北京中清研信息技术研究院深度合作，整合优质资源，实现产教深度融合</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fa fa-graduation-cap"></i>
+                    </div>
+                    <h3>双师双能</h3>
+                    <p>整合学校教师、企业导师、行业精英、领域专家，建设高水平师资队伍</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fa fa-certificate"></i>
+                    </div>
+                    <h3>就业导向</h3>
+                    <p>提供学历提升、实习实训、技能培训、创业就业等全方位服务</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="programs-preview">
+        <div class="container">
+            <div class="section-title">
+                <h2>特色专业</h2>
+                <p>面向数字经济时代，培养高素质应用型人才</p>
+            </div>
+            <div class="programs-grid">
+                <div class="program-card">
+                    <div class="program-card-content">
+                        <h3>电子商务专业（AI应用方向）</h3>
+                        <p>培养兼具电商运营思维与AI技术能力的复合型人才，通过AI技术赋能电商运营，打造数字经济时代的创新型人才。</p>
+                        <a href="programs.html#ai-ecommerce" class="btn-primary">了解详情</a>
+                    </div>
+                </div>
+                <div class="program-card">
+                    <div class="program-card-content">
+                        <h3>网络营销与直播电商专业</h3>
+                        <p>培养新媒体营销与直播电商领域的专业人才，掌握直播运营、短视频制作、新媒体营销等核心技能。</p>
+                        <a href="programs.html#live-commerce" class="btn-primary">了解详情</a>
+                    </div>
+                </div>
+                <div class="program-card">
+                    <div class="program-card-content">
+                        <h3>数字媒体技术专业</h3>
+                        <p>培养数字内容创作与技术开发的复合型人才，涵盖图像处理、动画制作、虚拟现实等领域。</p>
+                        <a href="programs.html#digital-media" class="btn-primary">了解详情</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <p>© 2024 力明华大数智产业学院. All rights reserved.</p>
+        </div>
+    </footer>
+</body>
+</html> 
