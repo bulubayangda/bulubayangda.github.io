@@ -192,19 +192,8 @@
     </style>
 </head>
 <body>
-    <header>
-        <div class="container header-content">
-            <div class="logo">山东力明科技职业学院</div>
-            <nav>
-                <ul>
-                    <li><a href="index.html">首页</a></li>
-                    <li><a href="about.html">学院简介</a></li>
-                    <li><a href="programs.html">专业介绍</a></li>
-                    <li><a href="contact.html">联系我们</a></li>
-                </ul>
-            </nav>
-        </div>
-    </header>
+    <!-- 添加header占位符 -->
+    <div id="header-placeholder"></div>
 
     <section class="hero">
         <div class="container">
@@ -283,5 +272,14 @@
             <p>© 2024 力明华大数智产业学院. All rights reserved.</p>
         </div>
     </footer>
+
+    <!-- 在底部添加加载脚本 -->
+    <script>
+        fetch('header.html')
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById('header-placeholder').innerHTML = data;
+            });
+    </script>
 </body>
 </html> 
