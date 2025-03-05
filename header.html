@@ -1,195 +1,106 @@
-<header class="header">
-    <nav class="navbar navbar-expand-lg navbar-light">
-        <div class="container">
-            <a class="navbar-brand" href="index.html">
-                <img src="images/logo.png" alt="力明华大数智产业学院" class="logo">
-            </a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarNav">
-                <ul class="navbar-nav ms-auto">
-                    <li class="nav-item">
-                        <a class="nav-link" href="index.html">首页</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="about.html">学院简介</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="programs.html">专业设置</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="faculty.html">师资力量</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="news.html">新闻动态</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="contact.html">联系我们</a>
-                    </li>
-                </ul>
-            </div>
-        </div>
+<header class="site-header">
+    <div class="header-logo">
+        <a href="index.html">
+            <img src="images/logo.png" alt="力明华大数智产业学院">
+        </a>
+    </div>
+    <nav class="site-nav">
+        <a href="index.html" class="nav-item">首页</a>
+        <a href="about.html" class="nav-item">学院简介</a>
+        <a href="programs.html" class="nav-item">专业设置</a>
+        <a href="faculty.html" class="nav-item">师资力量</a>
+        <a href="news.html" class="nav-item">新闻动态</a>
+        <a href="contact.html" class="nav-item">联系我们</a>
     </nav>
 </header>
 
 <style>
-    .navbar {
-        padding: 0.75rem 1rem;
-        background-color: white;
-        box-shadow: 0 2px 10px rgba(0,0,0,0.05);
-    }
-    
-    .logo {
-        height: 40px;
-        width: auto;
-    }
-    
-    .nav-link {
-        color: var(--text-color) !important;
-        font-weight: 500;
-        padding: 0.5rem 1rem !important;
-        transition: all 0.3s ease;
-    }
-    
-    .nav-link:hover, .nav-link.active {
-        color: var(--primary-color) !important;
-    }
-    
-    /* 移动端优化 */
-    @media (max-width: 991px) {
-        .navbar {
-            padding: 0.5rem 1rem;
-        }
-        
-        .logo {
-            height: 32px;
-        }
-        
-        /* 汉堡菜单按钮样式 */
-        .navbar-toggler {
-            padding: 0.25rem;
-            border: none;
-            width: 36px;
-            height: 36px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            background-color: transparent;
-        }
-        
-        .navbar-toggler:focus {
-            box-shadow: none;
-        }
-        
-        /* 下拉菜单样式 */
-        .navbar-collapse {
-            position: fixed;
-            top: 0;
-            right: 0;
-            bottom: 0;
-            width: 250px;
-            height: 100vh;
-            background-color: white;
-            z-index: 1000;
-            transform: translateX(100%);
-            transition: transform 0.3s ease-in-out;
-            padding: 1rem;
-            box-shadow: -2px 0 10px rgba(0,0,0,0.1);
-        }
-        
-        .navbar-collapse.show {
-            transform: translateX(0);
-        }
-        
-        /* 导航菜单样式 */
-        .navbar-nav {
-            margin-top: 2rem;
-        }
-        
-        .nav-item {
-            width: 100%;
-            margin: 0;
-        }
-        
-        .nav-link {
-            padding: 1rem !important;
-            border-bottom: 1px solid rgba(0,0,0,0.05);
-            font-size: 1rem;
-            display: block;
-            text-align: left;
-        }
-        
-        .nav-link:hover {
-            background-color: rgba(40, 81, 227, 0.05);
-        }
-        
-        /* 关闭按钮 */
-        .navbar-collapse::before {
-            content: '×';
-            position: absolute;
-            top: 0.5rem;
-            right: 1rem;
-            font-size: 1.5rem;
-            cursor: pointer;
-            width: 36px;
-            height: 36px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            color: var(--text-color);
-        }
-    }
-    
-    /* 遮罩层 */
-    .navbar-backdrop {
-        display: none;
+    .site-header {
         position: fixed;
         top: 0;
         left: 0;
         right: 0;
-        bottom: 0;
-        background-color: rgba(0,0,0,0.5);
-        z-index: 999;
+        background: white;
+        box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        z-index: 100;
     }
-    
-    .navbar-backdrop.show {
-        display: block;
+
+    .header-logo {
+        padding: 10px 15px;
+    }
+
+    .header-logo img {
+        height: 36px;
+        width: auto;
+    }
+
+    .site-nav {
+        padding: 10px 15px;
+        background: #f8f9fa;
+        overflow-x: auto;
+        white-space: nowrap;
+        -webkit-overflow-scrolling: touch;
+        scrollbar-width: none; /* Firefox */
+    }
+
+    .site-nav::-webkit-scrollbar {
+        display: none; /* Chrome */
+    }
+
+    .nav-item {
+        display: inline-block;
+        padding: 8px 16px;
+        margin: 0 4px;
+        color: #333;
+        text-decoration: none;
+        background: white;
+        border: 1px solid #eee;
+        border-radius: 16px;
+        font-size: 14px;
+    }
+
+    .nav-item:hover,
+    .nav-item.active {
+        background: #2851E3;
+        color: white;
+        border-color: #2851E3;
+    }
+
+    /* 为固定头部留出空间 */
+    body {
+        padding-top: 100px;
+    }
+
+    /* 确保在小屏幕上也能正常工作 */
+    @media (max-width: 480px) {
+        .header-logo {
+            padding: 8px 12px;
+        }
+
+        .header-logo img {
+            height: 32px;
+        }
+
+        .site-nav {
+            padding: 8px 12px;
+        }
+
+        .nav-item {
+            padding: 6px 12px;
+            font-size: 13px;
+        }
     }
 </style>
 
 <script>
-document.addEventListener('DOMContentLoaded', function() {
-    // 创建遮罩层
-    const backdrop = document.createElement('div');
-    backdrop.className = 'navbar-backdrop';
-    document.body.appendChild(backdrop);
-    
-    // 获取导航元素
-    const navbarToggler = document.querySelector('.navbar-toggler');
-    const navbarCollapse = document.querySelector('.navbar-collapse');
-    
-    // 点击汉堡菜单
-    navbarToggler.addEventListener('click', function() {
-        navbarCollapse.classList.toggle('show');
-        backdrop.classList.toggle('show');
-        document.body.style.overflow = 'hidden';
+    // 标记当前页面的导航项
+    document.addEventListener('DOMContentLoaded', function() {
+        const currentPage = window.location.pathname.split('/').pop() || 'index.html';
+        const navItems = document.querySelectorAll('.nav-item');
+        navItems.forEach(item => {
+            if (item.getAttribute('href') === currentPage) {
+                item.classList.add('active');
+            }
+        });
     });
-    
-    // 点击遮罩层关闭菜单
-    backdrop.addEventListener('click', function() {
-        navbarCollapse.classList.remove('show');
-        backdrop.classList.remove('show');
-        document.body.style.overflow = '';
-    });
-    
-    // 点击关闭按钮
-    navbarCollapse.addEventListener('click', function(e) {
-        if (e.target === this.querySelector('::before')) {
-            navbarCollapse.classList.remove('show');
-            backdrop.classList.remove('show');
-            document.body.style.overflow = '';
-        }
-    });
-});
 </script> 
