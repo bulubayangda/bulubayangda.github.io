@@ -1,17 +1,19 @@
 <header class="site-header">
-    <div class="header-logo">
-        <a href="index.html">
-            <img src="images/logo.png" alt="力明华大数智产业学院">
-        </a>
+    <div class="container header-content">
+        <div class="header-left">
+            <div class="header-logo">
+                <a href="index.html">
+                    <img src="images/logo.png" alt="力明华大数智产业学院">
+                </a>
+            </div>
+            <nav class="site-nav">
+                <a href="index.html" class="nav-item">首页</a>
+                <a href="about.html" class="nav-item">学院简介</a>
+                <a href="programs.html" class="nav-item">专业设置</a>
+                <a href="contact.html" class="nav-item">联系我们</a>
+            </nav>
+        </div>
     </div>
-    <nav class="site-nav">
-        <a href="index.html" class="nav-item">首页</a>
-        <a href="about.html" class="nav-item">学院简介</a>
-        <a href="programs.html" class="nav-item">专业设置</a>
-        <a href="faculty.html" class="nav-item">师资力量</a>
-        <a href="news.html" class="nav-item">新闻动态</a>
-        <a href="contact.html" class="nav-item">联系我们</a>
-    </nav>
 </header>
 
 <style>
@@ -25,38 +27,43 @@
         z-index: 100;
     }
 
+    .header-content {
+        display: flex;
+        align-items: center;
+        padding: 0.5rem 0;
+    }
+
+    .header-left {
+        display: flex;
+        align-items: center;
+        gap: 2rem;
+    }
+
     .header-logo {
-        padding: 10px 15px;
+        padding: 10px 0;
     }
 
     .header-logo img {
-        height: 36px;
+        height: 45px; /* 增大 logo 图片 */
         width: auto;
     }
 
     .site-nav {
-        padding: 10px 15px;
-        background: #f8f9fa;
-        overflow-x: auto;
-        white-space: nowrap;
-        -webkit-overflow-scrolling: touch;
-        scrollbar-width: none; /* Firefox */
-    }
-
-    .site-nav::-webkit-scrollbar {
-        display: none; /* Chrome */
+        display: flex;
+        gap: 1.5rem;
+        align-items: center;
     }
 
     .nav-item {
         display: inline-block;
         padding: 8px 16px;
-        margin: 0 4px;
         color: #333;
         text-decoration: none;
         background: white;
         border: 1px solid #eee;
         border-radius: 16px;
         font-size: 14px;
+        transition: all 0.3s;
     }
 
     .nav-item:hover,
@@ -68,26 +75,32 @@
 
     /* 为固定头部留出空间 */
     body {
-        padding-top: 100px;
+        padding-top: 70px;
     }
 
     /* 确保在小屏幕上也能正常工作 */
-    @media (max-width: 480px) {
-        .header-logo {
-            padding: 8px 12px;
+    @media (max-width: 768px) {
+        .header-left {
+            flex-direction: column;
+            align-items: flex-start;
+            gap: 0.5rem;
         }
 
         .header-logo img {
-            height: 32px;
+            height: 40px;
         }
 
         .site-nav {
-            padding: 8px 12px;
+            overflow-x: auto;
+            width: 100%;
+            padding: 0.5rem 0;
+            gap: 1rem;
         }
 
         .nav-item {
             padding: 6px 12px;
             font-size: 13px;
+            white-space: nowrap;
         }
     }
 </style>
